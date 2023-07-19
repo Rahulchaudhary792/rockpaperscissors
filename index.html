@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset = "UTF-8">
+       <meta name = "Description" content = "Rock-paper-scissors is a hand game that is usually played between two people. The game is often used as a choosing method in a way similar to coin flipping, drawing straws, or throwing dice. The rules are simple: players count to three in unison and simultaneously throw one of three hand signs representing rock, paper, or scissors. The winner is determined by the rules: rock wins against scissors, scissors win against paper, and paper wins against rock. If both players throw the same hand sign, the game is tied and they play again until there is a clear winner.">
+       <meta name = "Author" content = "Id, Phonenumber">
+       <meta name = "Keywords" content = "Rock, Paper, Scissors, Reset, Autoplay, Score">
+       <meta name = "Viewport" content = "width=device-width, initial-scale=1.0">
+       <title>Rock Paper Scissors</title>
+       <style>
+          body {
+            background-color: black;
+          }
+          .header-style1 {
+            color: white;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .image-style1 {
+            width: 60px;
+            height: 60px;
+          }
+          .image-style2 {
+            width: 60px;
+            height: 60px;
+          }
+          .image-style3 {
+            width: 60px;
+            height: 60px;
+          }
+          .button-style1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 3px solid white;
+            position: relative;
+            right: 100px;
+          }
+          .button-style2 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 3px solid white;
+          }
+          .button-style3 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 3px solid white;
+            position: relative;
+            left: 100px;
+          }
+          .div-style1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+          }
+          .header-style2 {
+            color: white;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5dvh;
+          }
+          .p-style1 {
+            color: white;
+            font-family: Arial;
+            margin-right: 10px;
+            margin-top: 60px;
+            position: relative;
+            left: 45px;
+          }
+          .p-style2 {
+            color: white;
+            font-family: Arial;
+            margin-left: 80px;
+            margin-top: 60px;
+          }
+          .img-result1 {
+            border: none;
+            background-color: transparent;
+            width: 60px;
+            height: 60px;
+            margin-right: 30px;
+            position: relative;
+            left: 40px;
+          }
+          .img-result2 {
+            border: none;
+            background-color: transparent;
+            width: 60px;
+            height: 60px;
+            position: relative;
+            left: 80px;
+          }
+          .div-style2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+          }
+          .p3-style {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+            font-size: 18px;
+            margin-top: 50px;
+          }
+          .div-style3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 90px;
+            margin-right: 395px;
+          }
+          .button-style4 {
+            color: black;
+            background-color: white;
+            padding: 7px 15px;
+          }
+          .div-style4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 375px;
+            position: relative;
+            bottom: 35px;
+          }
+          .button-style5 {
+            color: black;
+            background-color: white;
+            padding: 7px 24px;
+            position: relative;
+            top: 0px;
+          }
+          @media (min-width: 0px) and (max-width: 300px) {
+            .header-style3 {
+              color: white;
+              font-family: Arial;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 20px;
+              position: relative;
+              left: 50px;
+            }
+            .button-style01 {
+              width: 100px;
+              height: 100px;
+              border-radius: 100%;
+              background-color: transparent;
+              border: 3px solid white;
+              position: relative;
+              right: -10px; 
+            }
+            .button-style02 {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              background-color: transparent;
+              border: 3px solid white;
+              position: relative;
+              left: 50px;
+            }
+            .button-style03 {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              background-color: transparent;
+              border: 3px solid white;
+              position: relative;
+              left: 85px;
+            }
+            .js-result01 {
+              position: relative;
+              left: 47px;
+            }
+            .div-style02 {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              left: 40px;
+            }
+            .js-p03 {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              left: 50px;
+
+            }
+            .button-style04 {
+              position: relative;
+              left: 72px;
+            }
+            .button-style05 {
+              position: relative;
+              right: 75px;
+              bottom: 15px;
+            }
+          }
+          @media (min-width: 500px) and (max-width: 550px) {
+            .button-style005 {
+              position: relative;
+              right: 75px;
+              top: 0px;
+            }
+          }
+          @media (min-width: 300px) and (max-width: 700px) {
+            .header-style3 {
+              color: white;
+              font-family: Arial;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 20px;
+              position: relative;
+              left: 5px;
+            }
+            .button-style01 {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              background-color: transparent;
+              border: 3px solid white;
+              position: relative;
+              right: 30px; 
+            }
+            .button-style02 {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              background-color: transparent;
+              border: 3px solid white;
+              position: relative;
+              left: 3px;
+            }
+            .button-style03 {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              background-color: transparent;
+              border: 3px solid white;
+              position: relative;
+              left: 40px;
+            }
+            .js-result01 {
+              position: relative;
+              left: 3px;
+            }
+            .div-style02 {
+              position: relative;
+              left: 0px;
+            }
+            .js-p03 {
+              position: relative;
+              left: 10px;
+            }
+            .button-style04 {
+              position: relative;
+              left: 72px;
+            }
+            .button-style05 {
+              position: relative;
+              right: 77px;
+              bottom: 15px;
+            }
+          }
+       </style>
+    </head>
+    <body class = "js-body">
+        <h1 class = "header-style1 header-style3">ROCK PAPER SCISSORS</h1>
+        <div class = "div-style1">
+            <button class = "button-style1 button-style01" onclick = "but1()"><img src = "https://supersimple.dev/projects/rock-paper-scissors/images/rock-emoji.png" class = "image-style1"></button>
+            <button class = "button-style2 button-style02" onclick = "but2()"><img src = "https://supersimple.dev/projects/rock-paper-scissors/images/paper-emoji.png" class = "image-style2"></button>
+            <button class = "button-style3 button-style03" onclick = "but3()"><img src = "https://supersimple.dev/projects/rock-paper-scissors/images/scissors-emoji.png" class = "image-style3"></button>
+          </div>
+          <h2 class = "header-style2 js-result js-result01"></h2>
+        <div class = "div-style2 div-style02">
+          <p class = "p-style1 js-p1">You</p>
+          <img src = "https://supersimple.dev/projects/rock-paper-scissors/images/rock-emoji.png" class = "img-result1 js-result1">
+          <img src = "https://supersimple.dev/projects/rock-paper-scissors/images/rock-emoji.png" class = "img-result2 js-result2">
+          <p class = "p-style2 js-p2">Computer</p>
+        </div>
+        <p class = "p3-style js-p3 js-p03">Wins: 0, Losses: 0, Ties: 0</p>
+        <div class = "div-style3">
+          <button class = "button-style4 button-style04" onclick = "reset()">Resetscore</button>
+        </div>
+        <div class = "div-style4">
+          <button class = "button-style5 js-button5 button-style05 button-style005" onclick = "autoplay()">Autoplay</button>
+        </div>
+        <script>
+            output2();
+            function reset() {
+                localStorage.win = Number(0);
+                localStorage.loss = Number(0);
+                localStorage.tie = Number(0);
+                output2();
+            }
+            function output2() {
+                win = Number(localStorage.win);
+                loss = Number(localStorage.loss);
+                tie = Number(localStorage.tie);
+                document.querySelector('.js-p3').innerHTML = `Wins: ${localStorage.win}, Losses: ${localStorage.loss}, Tie: ${localStorage.tie}`;
+            }
+          function rand() {
+            let randNum = Math.random();
+            let computerMove = '';
+            if (randNum > 0 && randNum <= 1 / 3) {
+               return "rock";
+            }
+            else if (randNum > 1 / 3 && randNum <= 2 / 3) {
+               return "paper";
+            }
+            else {
+               return "scissors";
+            }
+          }
+          function but1() {
+             let computerMove = rand();
+             let userMove = "rock";
+             let result = '';
+             /*win = Number(localStorage.win);
+             loss = Number(localStorage.loss);
+             tie = Number(localStorage.tie);*/
+             if (computerMove == "rock") {
+                result = "Tied."
+                document.querySelector('.js-result').innerHTML = `${result}`;
+                tie += 1;
+             }
+             else if (computerMove == "paper") {
+                result = "You Lose.";
+                document.querySelector('.js-result').innerHTML = `${result}`;
+                loss += 1;
+             }
+             else {
+                result = "You Win.";
+                document.querySelector('.js-result').innerHTML = `${result}`;
+                win += 1;
+             }
+             output(computerMove,userMove);
+           }
+           function but2() {
+             let computerMove = rand();
+             let userMove = "paper";
+             let result = '';
+             /*win = Number(localStorage.win);
+             loss = Number(localStorage.loss);
+             tie = Number(localStorage.tie);*/
+             console.log(computerMove);
+             if (computerMove == "rock") {
+                result = "You Win.";
+                document.querySelector('.js-result').innerHTML = `${result}`;
+                win += 1;
+             }
+             else if (computerMove == "paper") {
+                result = "Tied.";
+                document.querySelector('.js-result').innerHTML = `${result}`;
+                tie += 1;
+             }
+             else {
+                result = "You Lose.";
+                document.querySelector('.js-result').innerHTML = `${result}`;
+                loss += 1;
+             }
+             output(computerMove,userMove);
+           }
+           function but3() {
+             let computerMove = rand();
+             let userMove = "scissors";
+             let result = '';
+             /*win = Number(localStorage.win);
+             loss = Number(localStorage.loss);
+             tie = Number(localStorage.tie);*/
+             console.log(computerMove);
+             if (computerMove == "rock") {
+                result = "You Lose.";
+                document.querySelector('.js-result').innerHTML = `${result}`;
+                loss += 1;
+             }
+             else if (computerMove == "paper") {
+                result = "You Win.";
+                document.querySelector('.js-result').innerHTML = `${result}`;
+                win += 1;
+             }
+             else {
+                result = "Tied.";
+                document.querySelector('.js-result').innerHTML = `${result}`;
+                tie += 1;
+             }
+             output(computerMove,userMove);
+           }
+           function output(computerMove,userMove) {
+                document.querySelector('.js-p1').innerHTML = "You";
+                document.querySelector('.js-result1').src = `https://supersimple.dev/projects/rock-paper-scissors/images/${userMove}-emoji.png`;
+                document.querySelector('.js-result2').src = `https://supersimple.dev/projects/rock-paper-scissors/images/${computerMove}-emoji.png`
+                document.querySelector('.js-p2').innerHTML = "Computer";
+                localStorage.win = win;
+                localStorage.loss = loss;
+                localStorage.tie = tie;
+                document.querySelector('.js-p3').innerHTML = `Wins: ${localStorage.win}, Losses: ${localStorage.loss}, Tie: ${localStorage.tie}`
+              }
+              let intervalId;
+              isAutoplaying = false;
+              function autoplay() {
+                 if (!isAutoplaying) {
+                   intervalId = setInterval(function () {
+                      let computerMove = rand();
+                      let randNum = Math.random();
+                      if (randNum > 0 && randNum <= 1 / 3) {
+                          userMove = "rock";
+                      }
+                      else if (randNum > 1 / 3 && randNum <= 2 / 3) {
+                          userMove = "paper";
+                      }
+                      else {
+                          userMove = "scissors";
+                      }
+                      if (userMove == "rock") {
+                          but1();
+                      }
+                      else if (userMove == "paper") {
+                          but2();
+                      }
+                      else {
+                          but3();
+                      }
+                      output(computerMove,userMove);
+                   }, 150) 
+                   document.querySelector('.js-button5').innerHTML = "Stopplay";
+                   isAutoplaying = true;
+                 }
+                 else {
+                   clearInterval(intervalId);
+                   document.querySelector('.js-button5').innerHTML = "Autoplay";
+                   isAutoplaying = false;
+                 }
+              }
+                 document.querySelector('.js-body').addEventListener('keydown', () => {
+                if (event.key === 'r' || event.key === "R") {
+                    but1();
+                }
+                else if (event.key === "p" || event.key === "P") {
+                    but2();
+                }
+                else if (event.key === "s" || event.key === "S") {
+                    but3();
+                }
+              })
+        </script>
+    </body>
+</html>
